@@ -1,0 +1,178 @@
+
+
+
+.widget-small {
+
+  display: flex;
+  flex-direction: column;
+
+
+  @include mq(lg){
+      flex-direction: row;
+  }
+
+}
+
+.canvaswrapper {
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 1em;
+
+  @include mq(lg){
+  width: 50%;
+  margin: 2em 0;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  }
+
+}
+
+//social widgets
+
+.social-charts {
+
+  @include mq(lg) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+
+  }
+}
+.social-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border: 2em solid $color-primary;
+  border-radius: 50%;
+  margin-right: 2em;
+
+}
+.twitter, .facebook, .gplus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1em;
+    background-color: lighten($grey, 43%);
+    padding: 1em;
+    border: 1px solid $grey;
+    border-radius: 4px;
+
+    @include mq(lg) {
+          width: 30%;
+    }
+}
+
+.social-icon {
+  position: relative;
+  right: 20px;
+  top: -15px;
+  svg {
+    height: auto;
+    fill: $white;
+  }
+}
+
+.social-text {
+  display: block;
+}
+
+.follower {
+  font-size: em(50px);
+  font-weight: 100;
+  margin: 0px;
+}
+
+//member list
+
+.memberactivity-wrapper {
+  margin: 2em 0;
+
+  @include mq(lg) {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  }
+}
+
+.newmembers, .recentactivity {
+
+  margin: 0px;
+  padding: 0 1em 0 0;
+
+  @include mq(lg) {
+    width: 50%;
+  }
+
+  :last-child {
+    border-bottom: none;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    margin: 0.6em 1em;
+    padding: 1em 0px;
+    border-bottom: 1px solid $grey;
+    img {
+      width: 40px;
+      height: 40px;
+      margin-right: 1em;
+    }
+
+  }
+}
+
+.recentactivity {
+  @include mq(lg) {
+  border-left: 1px solid $grey;
+  padding-left: 1em;
+  }
+}
+
+.date {
+  color: $grey;
+  fill: $grey;
+  display: none;
+  img {
+    margin: 0px;
+  }
+  @include mq(lg) {
+  display: flex;
+  margin-left: auto;
+
+  }
+}
+
+
+//message and settings
+
+
+.messagesettings-wrapper {
+  margin: 2em 0;
+  padding-bottom: 2em;
+
+  @include mq(lg) {
+  display: flex;
+  flex-direction: row;
+  }
+}
+
+.message, .settings {
+  margin: 0px;
+  padding: 0 0 0 0;
+
+  @include mq(lg) {
+    width: 50%;
+  }
+}
+
+.settings {
+  @include mq(lg) {
+  border-left: 1px solid $grey;
+  padding-left: 1em;
+  }
+}

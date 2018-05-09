@@ -1,0 +1,82 @@
+
+
+// fonts
+
+$font-url--google       :  'https://fonts.googleapis.com/css?family=Lato';
+
+$font-family-primary    :   "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-secondary  :   "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Font weight
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+//colors
+
+$white    : #fff;
+$black    : #0b0b0b;
+$grey     : #797e83;
+
+$color-primary   : #7477BF;
+$color-secondary : #4D4C72;
+
+$color-accent    : #81C98F;
+$color-shadow    : rgba($black, .2);
+
+$color-diagram1      : $color-primary;
+$color-diagram2      : $color-accent;
+$color-diagram3      : #74B1BF;
+
+$color-success       : #63CC82;
+$color-error         : #E4757A;
+$color-warning       : #FD7856;
+$color-info          : #927BC1;
+
+
+
+
+
+// Color Palette Modifiers
+
+$palettes: (
+  grey: (
+    xx-light : lighten($grey, 43%),
+    x-light  : lighten($grey, 35%),
+    light    : lighten($grey, 12%),
+    base     : $grey,
+    dark     : darken($grey, 8%),
+    x-dark   : darken($grey, 16%)
+  ),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	)
+);
+
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+
+//border radius
+
+$br: 4px;
+
+//grid columns
+
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;
+$g-cont-max-w   : 1050px;
+
+//breakpoints
+
+$break-sm    : 320px;
+$break-md    : 768px;
+$break-lg    : 1024px;

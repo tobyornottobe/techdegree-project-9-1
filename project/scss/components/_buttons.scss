@@ -1,0 +1,102 @@
+
+
+
+
+
+.btn {
+  @include m(default) {
+    @extend %btn;
+    background-color: $color-secondary;
+    }
+  @include m(success) {
+    @extend %btn;
+    background-color: $color-success;
+  }
+  @include m(error) {
+    @extend %btn;
+    background-color: $color-error;
+  }
+  @include m(warning) {
+    @extend %btn;
+    background-color: $color-warning;
+  }
+  @include m(info) {
+    @extend %btn;
+    background-color: $color-info;
+  }
+}
+
+.theme__colors {
+  width: 100%;
+}
+
+.tablinks {
+  height: em(50px);
+  width: em(120px);
+  background-color: $white;
+  color: $grey;
+  font-size: 1.4em;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-right: 1 solid $grey;
+
+}
+
+.switch-toggle.switch-candy label {
+  background-color: $white;
+
+}
+.switch-light.switch-candy input ~ span span:first-child, .switch-light.switch-candy input:checked ~ span span:nth-child(2), .switch-candy input:checked + label
+ {
+  background-color: $color-accent;
+  border-radius: 12px;
+}
+.switch-light.switch-candy span span, .switch-light.switch-candy input:checked ~ span span:first-child, .switch-toggle.switch-candy label
+{
+  color: $grey;
+  text-shadow: none;
+}
+
+
+.actionbuttons {
+  background-color: $color-primary;
+  border: none;
+  height: 3em;
+  color: $white;
+  text-transform: uppercase;
+  font-size: em(16px);
+  border-radius: 4px;
+}
+
+.send {
+  width: 100%;
+  @include mq(lg) {
+    width: 90%;
+  }
+}
+
+.save {
+  width: 49%;
+}
+
+.cancel {
+  margin-left: 1%;
+  width: 49%;
+  background-color: $grey;
+}
+
+.toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.switch-light {
+  width: 30%;
+  margin-left: auto;
+  @include mq(lg) {
+    width: 20%;
+    margin-right: 8em;
+  }
+}

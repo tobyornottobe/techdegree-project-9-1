@@ -1,0 +1,25 @@
+.container {
+  font-family: $font-family-secondary;
+}
+.link {
+  color:$color-secondary;
+  text-decoration: none;
+}
+.blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  color: $grey;
+  font-weight: $font-weight--light;
+  padding-left: 10px;
+  border-left: 7px solid $color-primary;
+  border-top-left-radius: $br;
+  border-bottom-left-radius: $br;
+}
+.headline--primary {
+  color: $color-primary;
+
+}
+.headline--secondary {
+  color: $grey;
+  font-weight: $font-weight--light;
+}

@@ -1,0 +1,19 @@
+
+.img {
+  @include m(logo) {
+    width: 160px;
+  }
+  @include m(frame) {
+    max-width: 100%;
+    height: auto;
+    outline-offset: 10px;
+    outline: $grey solid .1em;
+    margin: 1em auto 1em auto;
+    }
+  @include m(avatar) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em auto 1em auto;
+  }
+}

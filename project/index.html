@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+  <body>
+
+<header class="main-header">
+  <a class="app-name" href="#"><h1><strong>My</strong>App&trade;</h1></a>
+  <ul class="nav">
+    <li><a href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24">
+      <path d="M24 18v-8c0-5.5-4.5-10-10-10S4 4.5 4 10v8l-4 8h9.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H28l-4-8zM14 28c-1.3 0-2.4-.8-2.8-2h5.6c-.4 1.2-1.5 2-2.8 2zM3 24l3-6v-8c0-4.4 3.6-8 8-8s8 3.6 8 8v8l3 6H3z" fill="#fff"/>
+    </svg></a></li>
+    <li><a href="#"><img class="profile-pic" src="https://randomuser.me/api/portraits/men/35.jpg" alt="profile-pic"></a></li>
+    <li><a href="#"><div class="profile-name">Me Myself and I</div></a></li>
+  </ul>
+
+</header>
+
+
+<div class="wrapper">
+
+  <div class="nav-side-wrapper">
+    <header class="nav-side">
+      <a href="#"><img id="active-icon" src="icons/icon-dashboard.svg" alt="dashboard"></a>
+      <a href="#"><img src="icons/icon-members.svg" alt="dashboard"></a>
+      <a href="#"><img src="icons/icon-visits.svg" alt="dashboard"></a>
+      <a href="#"><img src="icons/icon-settings.svg" alt="dashboard"></a>
+    </header>
+  </div>
+
+  <div class="wrapper-graphs">
+
+    <div class="tab">
+      <button class="tablinks" onclick="dashboard">Dashboard</button>
+      <input class="search" type="text" name="search" placeholder="Search">
+    </div>
+
+    <div class="alert">
+      <span><strong>Alert </strong>At vero eos et accusam et justo duo dolores et ea rebum. </span>
+      <button class="close-button"><strong>x</strong></button>
+    </div>
+
+    <div class="traffic">
+      <section>
+        <h2>Traffic</h2>
+
+        <fieldset class="traffictime">
+          <div class="switch-toggle switch-candy">
+            <input id="hour" name="view" type="radio" checked>
+            <label for="hour" onclick="">Hourly</label>
+
+            <input id="day" name="view" type="radio">
+            <label for="day" onclick="">Daily</label>
+
+            <input id="week" name="view" type="radio" checked>
+            <label for="week" onclick="">Weekly</label>
+
+            <input id="month" name="view" type="radio">
+            <label for="month" onclick="">Monthly</label>
+            <a></a>
+          </div>
+        </fieldset>
+
+      </section>
+
+      <canvas id="traffic" width="800" height="300"></canvas>
+    </div>
+
+    <div class="widget-small">
+      <div class="canvaswrapper">
+        <h2>Daily traffic</h2>
+        <canvas id="chartDailyTraffic" ></canvas>
+      </div>
+      <div class="canvaswrapper">
+        <h2>Mobile users</h2>
+        <canvas id="chartMobileUsers" ></canvas>
+      </div>
+    </div>
+
+    <div class="social-wrapper">
+    <h2>Social stats</h2>
+    <div class="social-charts">
+
+      <div class="twitter">
+        <div class="social-icon-wrapper">
+          <symbol class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40">
+            <path d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"/></svg>
+          </symbol>
+        </div>
+        <div class="social-text">
+          <h3>Twitter</h3>
+          <p class="follower">10,325</p>
+        </div>
+        </div>
+
+      <div class="facebook">
+        <div class="social-icon-wrapper">
+          <symbol class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 5 60 60" width="40">
+            <path d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z"/></svg>
+          </symbol>
+        </div>
+        <div class="social-text">
+          <h3>Facebook</h3>
+          <p class="follower">8,739</p>
+        </div>
+      </div>
+      <div class="gplus">
+        <div class="social-icon-wrapper">
+          <symbol class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="40">
+              <path d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z"/></svg>
+          </symbol>
+        </div>
+        <div class="social-text">
+          <h3>Google Plus</h3>
+          <p class="follower">2,498</p>
+        </div>
+        </div>
+      </div>
+      </div>
+
+
+      <div class="memberactivity-wrapper">
+
+        <ul class="newmembers">
+          <h2>New members</h2>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/women/45.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Victoria Chambers</div>
+                  <a href="mailto:victoria.chambers80@example.com"><div>victoria.chambers80@example.com</div></a>
+                </div>
+              <div class="date">10/15/15</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/men/49.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Dale Byrd</div>
+                  <a href="mailto:dale.byrd52@example.com"><div>dale.byrd52@example.com</div></a>
+                </div>
+              <div class="date">10/15/15</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/men/88.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Dawn Wood</div>
+                  <a href="mailto:dawn.wood50@example.com"><div>dawn.wood50@example.com</div></a>
+                </div>
+              <div class="date">10/15/15</div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/lego/2.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Dan Oliver</div>
+                  <a href="mailto:dan.oliver82@example.com"><div>dan.oliver82@example.com</div></a>
+                </div>
+              <div class="date">10/15/15</div>
+            </a>
+          </li>
+
+        </ul>
+
+
+        <ul class="recentactivity">
+          <h2>Recent activity</h2>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/women/45.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Victoria Chambers</div>
+                  <a href="#"><div>4 hours ago</div></a>
+                </div>
+              <div class="date"><img src="icons/chevron-right.svg" alt="chevron"></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/men/49.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Dale Byrd</div>
+                  <a href="#"><div>5 hours ago</div></a>
+                </div>
+              <div class="date"><img src="icons/chevron-right.svg" alt="chevron"></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/men/88.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Dawn Wood</div>
+                  <a href="#"><div>5 hours ago</div></a>
+                </div>
+              <div class="date"><img src="icons/chevron-right.svg" alt="chevron"></div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img class="profile-pic" src="https://randomuser.me/api/portraits/lego/2.jpg" alt="profile-pic">
+                <div class="membername">
+                  <div >Dan Oliver</div>
+                  <a href="#"><div>1 day ago</div></a>
+                </div>
+              <div class="date"><img src="icons/chevron-right.svg" alt="chevron"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="messagesettings-wrapper">
+
+        <div class="message">
+          <h2>Message user</h2>
+            <div class="submit-alert">
+              <span><strong>You have successfully sent the message.</strong></span>
+              <button class="close-button"><strong>x</strong></button>
+            </div>
+            <div class="error-alert">
+              <span><strong>You need to add a user and a message.</strong></span>
+              <button class="close-button"><strong>x</strong></button>
+            </div>
+            <form action="index.html" method="post">
+            <input type="text" id="name" name="user_name" placeholder="Search for User" required>
+            <textarea id="message" name="user_message" placeholder="Message for User" required></textarea>
+            <button class="actionbuttons send" type="submit">Send</button>
+            </form>
+        </div>
+
+        <ul class="settings">
+          <h2>Settings</h2>
+
+          <div class="toggle">
+
+          <p><strong class="togglelabel">
+            Send Email Notifications
+          </strong></p>
+
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+
+            <span class="togglebtn">
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+
+          </div>
+
+          <div class="toggle">
+
+          <p><strong class="togglelabel">
+            Set Profile to Public
+          </strong></p>
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+            <span class="togglebtn">
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+
+          </div>
+
+          <select id="timezone" name="timezone">
+              <option value="select-timezone">Select Timezone</option>
+          </select>
+
+          <button  class="actionbuttons save" type="submit">Save</button>
+          <button class="actionbuttons cancel" type="submit">Cancel</button>
+
+        </ul>
+
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+
+</footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  <script src="js/script.js"></script>
+
+</body>
+</html>

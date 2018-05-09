@@ -1,0 +1,184 @@
+
+.main-header, .nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  padding-top: 2em;
+  background-color: $color-primary;
+
+  @include mq(med) {
+    padding: 0px;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+  }
+  @include mq(lg) {
+    flex-direction: row;
+
+  }
+}
+
+.app-name {
+  align-self: center;
+
+  @include mq(med) {
+      margin-left: 20px;
+  }
+  @include mq(lg) {
+      margin-right: auto;
+      margin-top: 0px;
+      margin-bottom: 0px;
+  }
+}
+
+.nav {
+  display: flex;
+  margin-top: 1.5em;
+  padding: 0px;
+
+  @include mq(med) {
+      flex-direction: row;
+
+    }
+  @include mq(lg) {
+      flex-direction: row;
+      align-items: center;
+      margin: auto 0;
+
+    }
+
+  a {
+    display: block;
+    color: $white;
+    font-size: 1.125em;;
+    font-weight: $font-weight--medium;
+    text-align: center;
+
+    padding: .4em;
+    border-bottom: 1px solid $color-accent;
+
+    @include mq(med) {
+      border-bottom-color: transparent;
+    }
+  }
+
+  a:hover {
+    color: $color-accent;
+    border-bottom-color: $white;
+  }
+}
+
+
+.icon-bell {
+  padding: 0.3em;
+  height: em(30px);
+
+  @include mq(lg) {
+    border-right: 1px solid $color-shadow;
+    padding-right: 1em;
+  }
+}
+.profile-pic {
+  border-radius: 50%;
+  height: em(30px);
+}
+.profile-name {
+  padding: 0.3em;
+  height: em(30px);
+}
+
+
+/*
+  @include e(item) {
+    @extend %nav-item-disp;
+    a {
+      @extend %nav-item-link;
+
+      &:hover {
+        @extend %nav-item-on;
+        color: grey;
+      }
+    }
+  }
+*/
+
+
+//side nav
+
+.nav-side {
+    background-color: $color-secondary;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+
+    img {
+      display: flex;
+      width: 2em;
+      margin: em(20px);
+      opacity: 0.8;
+    }
+
+   @include mq(lg) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100px;
+    height: 100%;
+  }
+}
+
+#active-icon {
+  opacity: 1;
+}
+
+//tab nav
+
+.tab {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  background-color: lighten($grey, 43%);
+
+  @include mq(lg) {
+  flex-direction: row;
+  align-items:baseline;
+  display:flex;
+  border-bottom: 1px solid $grey;
+  }
+}
+
+//alert
+
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+  @extend %alert;
+
+}
+
+.submit-alert, .error-alert {
+  width: 100%;
+  @extend %alert;
+  @extend %clearfix;
+  @include mq(lg){
+    width: 90%;
+  };
+}
+
+.traffictime {
+  border: none;
+  @include mq(lg) {
+  width: 40%;
+  float: right;
+}
+}

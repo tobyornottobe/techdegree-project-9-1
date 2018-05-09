@@ -1,0 +1,38 @@
+
+.nav-side-wrapper {
+  display: block;
+  flex-direction: row;
+}
+
+.wrapper {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+  @include mq(lg) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.wrapper-graphs {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2em;
+
+  @include mq(lg) {
+    width: 100%;
+    margin: 0px;
+
+  }
+}
+
+.traffic, .widget-small, .social-wrapper, .memberactivity-wrapper, .messagesettings-wrapper, .alert {
+  @include mq(lg) {
+  margin: 0 2em;
+  }
+}

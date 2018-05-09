@@ -1,0 +1,69 @@
+//Media Queries
+
+@mixin mq($break) {
+  @if $break == "sm" {
+    @media (min-width: $break-sm) and (max-width: $break-md) {
+      @content;
+    }
+  }
+  @else if $break == "med" {
+    @media (min-width: $break-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == "lg" {
+    @media (min-width: $break-lg + 1) {
+      @content;
+    }
+  }
+  @else {
+    @error "Hmmm! No value could be retrieved for '#{$break}'.";
+  }
+}
+
+
+//Flexbox settings
+
+@mixin flex($flex, $direction, $wrap, $justify) {
+  display: $flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+}
+
+@mixin g-columns {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    // Generate and output the column modifier classes
+    &--#{$i} {
+      flex-basis: percentage($target / $context);
+    }
+  }
+}
+
+
+
+@mixin doubly($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
+
+//Element BEM Selectors
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+
+//Modifier BEM Selectors
+
+@mixin m($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
