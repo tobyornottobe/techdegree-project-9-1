@@ -15,16 +15,16 @@ $(".submit-alert").hide();
 function validateForm(event) {
     var messageUser = document.getElementById("name").value;
     var messageContent = document.getElementById("message").value;
-    if ( messageUser === null || messageUser === "" ) { //if the user field is empty
-        $('.error-alert').fadeIn('slow').delay(2000).fadeOut('slow'); //show error message
-        event.preventDefault(event); //stop page from reloading
-    } else if ( messageContent === null || messageContent === "" ) { //if the message field is empty
-        $('.error-alert').fadeIn('slow').delay(2000).fadeOut('slow'); //show error message
+    if ( messageUser === null || messageUser === "" ) {
+        $('.error-alert').fadeIn('slow').delay(2000).fadeOut('slow');
+        event.preventDefault(event);
+    } else if ( messageContent === null || messageContent === "" ) {
+        $('.error-alert').fadeIn('slow').delay(2000).fadeOut('slow');
         event.preventDefault(event);
     } else {
-        $('.submit-alert').fadeIn('slow').delay(2000).fadeOut('slow'); //otherwise, show sent message
-         $("input[name='searchUser']").val(""); //clears text
-         $("textarea").val(""); //clears text
+        $('.submit-alert').fadeIn('slow').delay(2000).fadeOut('slow');
+         $("input[name='searchUser']").val("");
+         $("textarea").val(""); 
          event.preventDefault(event);
     }
 }
