@@ -77,11 +77,12 @@
 
 .social-text {
   display: block;
+
 }
 
 .follower {
   font-size: em(50px);
-  font-weight: 100;
+  font-weight: 300;
   margin: 0px;
 }
 
@@ -98,10 +99,12 @@
   }
 }
 
+
 .newmembers, .recentactivity {
 
   margin: 0px;
   padding: 0 1em 0 0;
+
 
   @include mq(lg) {
     width: 50%;
@@ -110,6 +113,7 @@
   :last-child {
     border-bottom: none;
   }
+
 
   li {
     display: flex;
@@ -122,6 +126,11 @@
       height: 40px;
       margin-right: 1em;
     }
+    a {
+      text-decoration: none;
+      color: $grey;
+    }
+
 
   }
 }

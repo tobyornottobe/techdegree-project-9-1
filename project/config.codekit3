@@ -400,16 +400,26 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/scss\/styles.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/scss\/styles-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/scss\/styles.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
 		"ft": 4,
-		"ma": 1,
+		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/styles.css",
-		"oF": 3,
+		"oAP": "\/scss\/styles.css",
+		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},

@@ -11,14 +11,27 @@ $(".close-button").click(function(){
 $(".error-alert").hide();
 $(".submit-alert").hide();
 
-$(".send").click(function(){
-  if (form.message.value.trim() == ""){
-         return false
-     } else {
-       $(".submit-alert").show();
-     }
-});
 
+function validateForm(event) {
+    var messageUser = document.getElementById("name").value;
+    var messageContent = document.getElementById("message").value;
+    if ( messageUser === null || messageUser === "" ) { //if the user field is empty
+        $('.error-alert').fadeIn('slow').delay(2000).fadeOut('slow'); //show error message
+        event.preventDefault(event); //stop page from reloading
+    } else if ( messageContent === null || messageContent === "" ) { //if the message field is empty
+        $('.error-alert').fadeIn('slow').delay(2000).fadeOut('slow'); //show error message
+        event.preventDefault(event);
+    } else {
+        $('.submit-alert').fadeIn('slow').delay(2000).fadeOut('slow'); //otherwise, show sent message
+         $("input[name='searchUser']").val(""); //clears text
+         $("textarea").val(""); //clears text
+         event.preventDefault(event);
+    }
+}
+
+$(".send").click(function(event) {
+    validateForm(event);
+});
 
 
 
@@ -30,7 +43,7 @@ var myChart = new Chart(lineChart, {
     data: {
         labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3", "4-10", "11-17", "18-24", "25-31"],
         datasets: [{
-            label: '# of Votes',
+            label: '# of visits',
             data: [500, 600, 1100, 1000, 1500, 2000, 1500, 1300, 1700, 2300, 2400, 2500, 2300],
             backgroundColor: [
                 'rgba(116, 119, 191, 0.2)',
@@ -49,8 +62,9 @@ var myChart = new Chart(lineChart, {
                 'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1,
+            pointBorderWidth: 3,
             pointRadius: 8,
-            pointBackgroundColor: 'rgba(255, 255, 255, 1)',
+            pointBackgroundColor: 'rgba(255, 255, 255, 0.8)',
             lineTension: 0
         }]
     },
@@ -77,13 +91,13 @@ var thisChart = new Chart(barChart, {
             label: '# of daily users',
             data: [50, 100, 170, 125, 200, 180, 70],
             backgroundColor: [
-                'rgba(116, 119, 191)',
-                'rgba(116, 119, 191)',
-                'rgba(116, 119, 191)',
-                'rgba(116, 119, 191)',
-                'rgba(116, 119, 191)',
-                'rgba(116, 119, 191)',
-                'rgba(116, 119, 191)'
+                'rgba(116, 119, 191, 1)',
+                'rgba(116, 119, 191, 1)',
+                'rgba(116, 119, 191, 1)',
+                'rgba(116, 119, 191, 1)',
+                'rgba(116, 119, 191, 1)',
+                'rgba(116, 119, 191, 1)',
+                'rgba(116, 119, 191, 1)'
             ],
             borderWidth: 1
         }]
@@ -112,22 +126,16 @@ var thisChart = new Chart(donutChart, {
         labels: ["Phones", "Tablets", "Desktop"],
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5],
+            data: [12, 19, 3],
             backgroundColor: [
                 'rgba(116, 119, 191, 1)',
                 'rgba(77, 76, 114, 1)',
-                'rgba(129,201,143, 1)',
-                'rgba(116,177,191, 1)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(129,201,143, 1)'
             ],
             borderColor: [
                 'rgba(116, 119, 191, 1)',
                 'rgba(77, 76, 114, 1)',
-                'rgba(129,201,143, 1)',
-                'rgba(116,177,191, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(129,201,143, 1)'
             ],
             borderWidth: 1
         }]

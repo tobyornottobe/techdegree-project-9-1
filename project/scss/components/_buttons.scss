@@ -1,35 +1,4 @@
 
-
-
-
-
-.btn {
-  @include m(default) {
-    @extend %btn;
-    background-color: $color-secondary;
-    }
-  @include m(success) {
-    @extend %btn;
-    background-color: $color-success;
-  }
-  @include m(error) {
-    @extend %btn;
-    background-color: $color-error;
-  }
-  @include m(warning) {
-    @extend %btn;
-    background-color: $color-warning;
-  }
-  @include m(info) {
-    @extend %btn;
-    background-color: $color-info;
-  }
-}
-
-.theme__colors {
-  width: 100%;
-}
-
 .tablinks {
   height: em(50px);
   width: em(120px);
