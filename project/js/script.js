@@ -1,6 +1,6 @@
 
 
-//alerts
+//alerts that show up on top and above the 
 
 $(".close-button").click(function(){
     $(".alert").hide();
@@ -11,6 +11,7 @@ $(".close-button").click(function(){
 $(".error-alert").hide();
 $(".submit-alert").hide();
 
+//validat
 
 function validateForm(event) {
     var messageUser = document.getElementById("name").value;
@@ -24,7 +25,7 @@ function validateForm(event) {
     } else {
         $('.submit-alert').fadeIn('slow').delay(2000).fadeOut('slow');
          $("input[name='searchUser']").val("");
-         $("textarea").val(""); 
+         $("textarea").val("");
          event.preventDefault(event);
     }
 }
@@ -47,19 +48,13 @@ var myChart = new Chart(lineChart, {
             data: [500, 600, 1100, 1000, 1500, 2000, 1500, 1300, 1700, 2300, 2400, 2500, 2300],
             backgroundColor: [
                 'rgba(116, 119, 191, 0.2)',
-                'rgba(77, 76, 114, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(77, 76, 114, 0.2)'
+
             ],
             borderColor: [
                 'rgba(77, 76, 114, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(54, 162, 235, 1)'
+
             ],
             borderWidth: 1,
             pointBorderWidth: 3,
