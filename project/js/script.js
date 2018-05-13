@@ -1,6 +1,6 @@
 
 
-//alerts that show up on top and above the
+//alerts that show up on top and above the messaging field
 
 $(".close-button").click(function(){
     $(".alert").hide();
@@ -11,7 +11,7 @@ $(".close-button").click(function(){
 $(".error-alert").hide();
 $(".submit-alert").hide();
 
-//validat
+//validation of message form
 
 function validateForm(event) {
     var messageUser = document.getElementById("name").value;
@@ -36,7 +36,7 @@ $(".send").click(function(event) {
 
 
 
-//charts
+//line chart
 
 var lineChart = document.getElementById("traffic").getContext('2d');
 var myChart = new Chart(lineChart, {
@@ -73,6 +73,8 @@ var myChart = new Chart(lineChart, {
     }
 });
 
+//bar chart
+
 var barChart = document.getElementById("chartDailyTraffic").getContext('2d');
 var thisChart = new Chart(barChart, {
     type: 'bar',
@@ -108,7 +110,7 @@ var thisChart = new Chart(barChart, {
     }
 });
 
-
+//doughnut chart
 
 var donutChart = document.getElementById("chartMobileUsers").getContext('2d');
 var thisChart = new Chart(donutChart, {
