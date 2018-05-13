@@ -1,6 +1,6 @@
 
 
-//alerts that show up on top and above the 
+//alerts that show up on top and above the
 
 $(".close-button").click(function(){
     $(".alert").hide();
@@ -46,11 +46,7 @@ var myChart = new Chart(lineChart, {
         datasets: [{
             label: '# of visits',
             data: [500, 600, 1100, 1000, 1500, 2000, 1500, 1300, 1700, 2300, 2400, 2500, 2300],
-            backgroundColor: [
-                'rgba(116, 119, 191, 0.2)',
-                'rgba(77, 76, 114, 0.2)'
-
-            ],
+            backgroundColor: 'rgba(116, 119, 191, 0.2)',
             borderColor: [
                 'rgba(77, 76, 114, 1)',
                 'rgba(54, 162, 235, 1)'
