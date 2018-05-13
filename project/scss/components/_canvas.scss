@@ -1,6 +1,4 @@
 
-
-
 .widget-small {
 
   display: flex;
@@ -48,6 +46,7 @@
   margin-right: 2em;
 
 }
+
 .twitter, .facebook, .gplus {
     display: flex;
     flex-direction: row;
@@ -99,7 +98,6 @@
   }
 }
 
-
 .newmembers, .recentactivity {
 
   margin: 0px;
@@ -110,10 +108,12 @@
     width: 50%;
   }
 
+  :first-child {
+    border-bottom: none;
+  }
   :last-child {
     border-bottom: none;
   }
-
 
   li {
     display: flex;
@@ -158,7 +158,6 @@
 
 
 //message and settings
-
 
 .messagesettings-wrapper {
   margin: 2em 0;

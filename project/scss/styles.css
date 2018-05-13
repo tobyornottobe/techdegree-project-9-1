@@ -28,7 +28,7 @@
   border-top: none;
   border-left: none;
   border-bottom: none;
-  border-right: 1 solid #797e83; }
+  border-right: 1px solid #797e83; }
 
 .switch-toggle.switch-candy label {
   background-color: #fff; }
@@ -153,6 +153,8 @@
   @media (min-width: 1025px) {
     .newmembers, .recentactivity {
       width: 50%; } }
+  .newmembers :first-child, .recentactivity :first-child {
+    border-bottom: none; }
   .newmembers :last-child, .recentactivity :last-child {
     border-bottom: none; }
   .newmembers li, .recentactivity li {
@@ -360,19 +362,6 @@
   padding: 0.3em;
   height: 1.875em; }
 
-/*
-  @include e(item) {
-    @extend %nav-item-disp;
-    a {
-      @extend %nav-item-link;
-
-      &:hover {
-        @extend %nav-item-on;
-        color: grey;
-      }
-    }
-  }
-*/
 .nav-side {
   background-color: #4D4C72;
   display: flex;
